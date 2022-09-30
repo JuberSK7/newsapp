@@ -7,14 +7,15 @@ const News = () => {
   const [news, setNews] =  useState([]);
 
   ///////////// fetch Rest Newsapi using react axios
-
-  useEffect(() => {
-    const loadNews = async () => {
-const responce = await axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=59443656f0e74d46b55070e02da79298");
-setNews(responce.data.articles);
+  
+      const loadNews = async () => {
+       const responce = await axios.get("https://newsapi.org/v2/top-headlines?country=in&apiKey=59443656f0e74d46b55070e02da79298");
+      setNews(responce.data.articles);
       
     };
-    loadNews()
+
+  useEffect(() => {
+      loadNews()
   }, []);
 
   //console.log('news', news);
