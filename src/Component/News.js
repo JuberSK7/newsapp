@@ -22,16 +22,14 @@ setNews(responce.data.articles);
   return (
     /////// renders the api elements in jsx
 
-    <div className="News">
+    <div className="news">
        <h1> Reputeted News India</h1>
       {
         news && news.map((item,index) => {
           return(
            
             <div key={index} className='news-box'>
-              {/*<span>{item.author}</span>
-              <span>{item.content}</span>
-          */}
+
               <h2 className='headline'>{item.title}</h2>
               <p className='description'>{item.description}</p>
               <img alt='image' src={item.urlToImage}/>
